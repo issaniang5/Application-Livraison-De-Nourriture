@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatchCart, useCart } from './ContextReducer'
-// import { Dropdown, DropdownButton } from 'react-bootstrap';
+// importer { Dropdown, DropdownButton } from 'react-bootstrap';
 export default function Card(props) {
   let data = useCart();
 
@@ -48,7 +48,7 @@ export default function Card(props) {
       }
       else if (food.size !== size) {
         await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size,img: props.ImgSrc })
-        console.log("Size different so simply ADD one more to the list")
+        console.log("Taille différente, alors ajoutez simplement un de plus à la liste")
         return
       }
       return
@@ -69,7 +69,7 @@ export default function Card(props) {
   // checkBtn();
   //   },[data])
 
-  let finalPrice = qty * parseInt(options[size]);   //This is where Price is changing
+  let finalPrice = qty * parseInt(options[size]);   //C'est ici que le prix change
   // totval += finalPrice;
   // console.log(totval)
   return (
@@ -79,7 +79,7 @@ export default function Card(props) {
         <img src={props.ImgSrc} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} />
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
-          {/* <p className="card-text">This is some random text. This is description.</p> */}
+          {/* <p className="card-text">Ceci est un texte aléatoire. Ceci est une description.</p> */}
           <div className='container w-100 p-0' style={{ height: "38px" }}>
             <select className="m-2 h-100 w-20 bg-success text-black rounded" style={{ select: "#FF0000" }} onClick={handleClick} onChange={handleQty}>
               {Array.from(Array(6), (e, i) => {

@@ -12,7 +12,7 @@ import {
 // import Navbar from './components/Navbar';
 import Login from './screens/Login';
 import Signup from './screens/Signup';
-import { CartProvider } from './components/ContextReducer';
+import { CartProvider } from './components/ContextReducer.js';
 import MyOrder from './screens/MyOrder';
 
 
