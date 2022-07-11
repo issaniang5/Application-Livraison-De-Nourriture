@@ -7,7 +7,7 @@ export default function Cart() {
   if (data.length === 0) {
     return (
       <div>
-        <div className='m-5 w-100 text-center fs-3'>The Cart is Empty!</div>
+        <div className='m-5 w-100 text-center fs-3'>Le panier est vide !</div>
       </div>
     )
   }
@@ -48,10 +48,10 @@ export default function Cart() {
           <thead className=' text-success fs-4'>
             <tr>
               <th scope='col' >#</th>
-              <th scope='col' >Name</th>
-              <th scope='col' >Quantity</th>
+              <th scope='col' >Nom</th>
+              <th scope='col' >Quantité</th>
               <th scope='col' >Option</th>
-              <th scope='col' >Amount</th>
+              <th scope='col' >Montant</th>
               <th scope='col' ></th>
             </tr>
           </thead>
@@ -67,9 +67,9 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
+        <div><h1 className='fs-2'>Prix total : {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Passer à la caisse </button>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ export default function Login() {
 
     }
     else {
-      alert("Enter Valid Credentials")
+      alert("Entrez des identifiants valides")
     }
   }
 
@@ -45,14 +45,14 @@ export default function Login() {
           <div className="m-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
             <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
-            <div id="emailHelp" className="form-text">We'll never share your email with anyone.</div>
+            <div id="emailHelp" className="form-text">Nous ne partagerons jamais votre e-mail avec qui que ce soit.</div>
           </div>
           <div className="m-3">
             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
             <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
           </div>
-          <button type="submit" className="m-3 btn btn-success">Submit</button>
-          <Link to="/signup" className="m-3 mx-1 btn btn-danger">New User</Link>
+          <button type="submit" className="m-3 btn btn-success">Soumettre</button>
+          <Link to="/signup" className="m-3 mx-1 btn btn-danger">Nouvel utilisateur</Link>
         </form>
 
       </div>
@@ -61,6 +61,3 @@ export default function Login() {
 }
 
 
-// , 'Accept': 'application/json',
-//         'Access-Control-Allow-Origin': 'http://localhost:3000/login', 'Access-Control-Allow-Credentials': 'true',
-//         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, OPTIONS'

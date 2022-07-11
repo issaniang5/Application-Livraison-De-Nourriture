@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../components/Card'
-// import Carousel from '../components/Carousel'
+// Importer Carousel from '../components/Carousel'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
 
           <div className="carousel-inner " id='carousel'>
             <div class=" carousel-caption  " style={{ zIndex: "9" }}>
-              <div className=" d-flex justify-content-center">  {/* justify-content-center, copy this <form> from navbar for search box */}
+              <div className=" d-flex justify-content-center">  {/* justify-content-center, Copiez ce <form> depuis la barre de navigation pour la boîte de recherche */}
                 <input className="form-control me-2 w-75 bg-white text-dark" type="search" placeholder="Search in here..." aria-label="Search" value={search} onChange={(e) => { setSearch(e.target.value) }} />
                 <button className="btn text-white bg-danger" onClick={() => { setSearch('') }}>X</button>
               </div>
@@ -54,15 +54,15 @@ export default function Home() {
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
+            <span className="visually-hidden">Précédent</span>
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
+            <span className="visually-hidden">Suivant</span>
           </button>
         </div>
       </div>
-      <div className='container'> {/* boootstrap is mobile first */}
+      <div className='container'> {/* Bootstrap est conçu pour le mobile en premier */}
         {
           foodCat !== []
             ? foodCat.map((data) => {
@@ -82,7 +82,7 @@ export default function Home() {
                           <Card foodName={filterItems.name} item={filterItems} options={filterItems.options[0]} ImgSrc={filterItems.img} ></Card>
                         </div>
                       )
-                    }) : <div> No Such Data </div>}
+                    }) : <div> Aucune donnée correspondante </div>}
                 </div>
               )
             })
