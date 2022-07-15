@@ -50,13 +50,13 @@ export default function Signup() {
     const json = await response.json()
     console.log(json);
     if (json.success) {
-      //save the auth toke to local storage and redirect
+      //Enregistrez le jeton d'authentification dans le stockage local et redirigez
       localStorage.setItem('token', json.authToken)
       navigate("/login")
 
     }
     else {
-      alert("Enter Valid Credentials")
+      alert("Entrez des identifiants valides")
     }
   }
 
@@ -73,7 +73,7 @@ export default function Signup() {
         <div className='container' >
           <form className='w-50 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
             <div className="m-3">
-              <label htmlFor="name" className="form-label">Name</label>
+              <label htmlFor="name" className="form-label"> Nom</label>
               <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} aria-describedby="emailHelp" />
             </div>
             <div className="m-3">
@@ -81,20 +81,20 @@ export default function Signup() {
               <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
             </div>
             <div className="m-3">
-              <label htmlFor="address" className="form-label">Address</label>
+              <label htmlFor="address" className="form-label">Adresse</label>
               <fieldset>
                 <input type="text" className="form-control" name='address' placeholder='"Click below for fetching address"' value={address} onChange={(e)=>setAddress(e.target.value)} aria-describedby="emailHelp" />
               </fieldset>
             </div>
             <div className="m-3">
-              <button type="button" onClick={handleClick} name="geolocation" className=" btn btn-success">Click for current Location </button>
+              <button type="button" onClick={handleClick} name="geolocation" className=" btn btn-success">Cliquez pour la localisation actuelle </button>
             </div>
             <div className="m-3">
               <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
               <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
             </div>
-            <button type="submit" className="m-3 btn btn-success">Submit</button>
-            <Link to="/login" className="m-3 mx-1 btn btn-danger">Already a user</Link>
+            <button type="submit" className="m-3 btn btn-success">Soumettre</button>
+            <Link to="/login" className="m-3 mx-1 btn btn-danger">Déjà utilisateur</Link>
           </form>
         </div>
       </div>
