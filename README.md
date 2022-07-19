@@ -2,7 +2,7 @@
 
 Le but de ce projet est de développer une application de livraison de nourriture utilisant la pile MERN (MongoDB, Express, React, Node.js). L'application permet aux utilisateurs de commander des articles alimentaires. Elle est conçue pour être conviviale, avec une interface moderne et épurée.
 
-<img src='https://github.com/issaniang5/Application-Livraison-De-Nourriture/blob/main/Images/Readme.jpeg' height=500px width=800px></img>
+<img align="center" src='https://github.com/issaniang5/Application-Livraison-De-Nourriture/blob/main/Images/Readme.jpeg' height=500px width=600px></img>
 
 
 ## Tech-Stack
