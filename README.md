@@ -1,9 +1,9 @@
-# Food Delivery App using MERN Stack
+# Application de Livraison de Nourriture utilisant la pile MERN
 
-The purpose of this project is to develop a food delivery app using the MERN (MongoDB, Express, React, Node.js) stack. The app allows users to order food items. The app is designed to be user-friendly, with a clean and modern interface.
+Le but de ce projet est de développer une application de livraison de nourriture utilisant la pile MERN (MongoDB, Express, React, Node.js). L'application permet aux utilisateurs de commander des articles alimentaires. Elle est conçue pour être conviviale, avec une interface moderne et épurée.
 
 
-## Tech-Stack-
+## Tech-Stack
 
 <div align="left">
 <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -17,109 +17,70 @@ The purpose of this project is to develop a food delivery app using the MERN (Mo
 </div>
 
 
-## Features-
+## Fonctionnalités
 
-- Allow users to browse food items.
-- Allow users to place orders.
-- Allow admin users to manage orders.
+- Permet aux utilisateurs de parcourir les articles alimentaires.
+- Permet aux utilisateurs de passer des commandes.
+- Permet aux administrateurs de gérer les commandes.
 
-## Architecture-
+## Architecture
 
-The food delivery app is built using the MERN stack. The app consists of several components, including the Home screen,My Orders screen, Cart screen, Login and Logout screen and Admin screen. 
+L'application de livraison de nourriture est construite en utilisant la pile MERN. L'application se compose de plusieurs composants, y compris l'écran d'accueil, l'écran "Mes Commandes", l'écran "Panier", l'écran de connexion et déconnexion, et l'écran d'administration.
 
-The Home screen displays the list of food items, and includes a search bar and number of items to be ordered options.The Home screen displays the list of items in the menu, and allows the user to add items to their cart. The Cart screen displays the list of items in the user's cart, and allows the user to place an order. The Order screen displays the details of the user's order.The Admin screen displays the management interface for menus and orders.
-
-## Design-
-
-The design of the app is modern and user-friendly, with a focus on simplicity and ease of use. The app uses a clean and minimalist design, with a black background and simple typography. The app also uses clear and concise language, with straightforward labels and instructions.
-
-The Home screen displays the list of food items in a grid view, with each food item displayed as a card.The Cart screen displays the list of items in the user's cart, with the total price and checkout button displayed prominently. The Order screen displays the details of the user's order.The Admin screen displays the management interface for orders and cart, with clear and intuitive navigation and controls.
-
-<!-- The app is designed to be scalable and modular, with a clean and organized codebase. The backend API is implemented using Express.js and Mongoose, with separate controllers and models for each component. The frontend is implemented using React, with separate components for each screen and functionality.-->
-
-## Usage-
+L'écran d'accueil affiche la liste des articles alimentaires et inclut une barre de recherche et des options pour le nombre d'articles à commander. L'écran d'accueil présente la liste des éléments du menu et permet à l'utilisateur d'ajouter des éléments à son panier. L'écran Panier affiche la liste des articles dans le panier de l'utilisateur et permet de passer une commande. L'écran Commande affiche les détails de la commande de l'utilisateur. L'écran Administrateur affiche l'interface de gestion des menus et des commandes.
 
 
+## Design
 
-## Live-Demo-
+Le design de l'application est moderne et convivial, avec un accent sur la simplicité et la facilité d'utilisation. L'application utilise un design épuré et minimaliste, avec un fond noir et une typographie simple. Elle utilise également un langage clair et concis, avec des étiquettes et des instructions simples.
 
-[Food-Delivery-App-Live]()
+L'écran d'accueil affiche la liste des articles alimentaires en vue grille, chaque article étant présenté sous forme de carte. L'écran Panier affiche la liste des articles dans le panier de l'utilisateur, avec le prix total et un bouton de paiement bien en évidence. L'écran Commande affiche les détails de la commande de l'utilisateur. L'écran Administrateur affiche l'interface de gestion des commandes et du panier, avec une navigation et des contrôles clairs et intuitifs.
+
+<!-- L'application est conçue pour être évolutive et modulaire, avec une base de code propre et organisée. L'API backend est implémentée avec Express.js et Mongoose, avec des contrôleurs et modèles séparés pour chaque composant. L'interface frontend est implémentée avec React, avec des composants séparés pour chaque écran et fonctionnalité. -->
 
 
-## Steps to Run the App- 
 
-### Getting Started with Create React App
+### Scripts Disponibles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### Available Scripts
-
-In the project directory, you can run:
+Dans le répertoire du projet, vous pouvez exécuter :
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Exécute l'application en mode développement.
+Ouvrez http://localhost:3000 pour la voir dans votre navigateur.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La page se rechargera lorsque vous apporterez des modifications.
+Vous pourrez également voir toutes les erreurs de lint dans la console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lance le testeur interactif en mode veille.
+Consultez la section sur l'exécution des tests pour plus d'informations.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construit l'application pour la production dans le dossier build.
+Elle regroupe correctement React en mode production et optimise la construction pour les meilleures performances.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La construction est minifiée et les noms de fichiers incluent des hachages.
+Votre application est prête à être déployée !
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Consultez la section sur le déploiement pour plus d'informations.
 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Note : ceci est une opération irréversible. Une fois que vous avez éjecté, vous ne pouvez pas revenir en arrière !
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Si vous n'êtes pas satisfait des outils de construction et des choix de configuration, vous pouvez éjecter à tout moment. Cette commande supprimera la dépendance de construction unique de votre projet.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Au lieu de cela, elle copiera tous les fichiers de configuration et les dépendances transitives (webpack, Babel, ESLint, etc.) dans votre projet pour que vous ayez un contrôle total sur eux. Toutes les commandes sauf éjecter continueront à fonctionner, mais elles pointeront vers les scripts copiés pour que vous puissiez les ajuster. À ce moment-là, vous êtes seul responsable.
 
-## Learn More
+Vous n'êtes pas obligé d'utiliser la commande éject. L'ensemble de fonctionnalités curées est adapté aux déploiements de petite et moyenne taille, et vous ne devez pas vous sentir obligé d'utiliser cette fonctionnalité. Cependant, nous comprenons que cet outil ne serait pas utile si vous ne pouviez pas le personnaliser lorsque vous êtes prêt.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Merci *
 
 
-## Screenshot-
 
 
