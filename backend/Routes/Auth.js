@@ -10,7 +10,7 @@ const fetch = require('../middleware/fetchdetails');
 const jwtSecret = "HaHa"
 // var foodItems= require('../index').foodData;
 // require("../index")
-//Creating a user and storing data to MongoDB Atlas, No Login Requiered
+//Création d'un utilisateur et stockage des données dans MongoDB Atlas, Aucune connexion requise
 router.post('/createuser', [
     body('email').isEmail(),
     body('password').isLength({ min: 5 }),
@@ -28,7 +28,7 @@ router.post('/createuser', [
     try {
         await User.create({
             name: req.body.name,
-            // password: req.body.password,  first write this and then use bcryptjs
+            // password: req.body.password,  Écrivez d'abord ceci, puis utilisez bcryptjs
             password: securePass,
             email: req.body.email,
             location: req.body.location
@@ -44,14 +44,14 @@ router.post('/createuser', [
         })
             .catch(err => {
                 console.log(err);
-                res.json({ error: "Please enter a unique value." })
+                res.json({ error: "Veuillez entrer une valeur unique." })
             })
     } catch (error) {
         console.error(error.message)
     }
 })
 
-// Authentication a User, No login Requiered
+// Authentification d'un utilisateur, Aucune connexion requise
 router.post('/login', [
     body('email', "Enter a Valid Email").isEmail(),
     body('password', "Password cannot be blank").exists(),
@@ -66,12 +66,12 @@ router.post('/login', [
     try {
         let user = await User.findOne({ email });  //{email:email} === {email}
         if (!user) {
-            return res.status(400).json({ success, error: "Try Logging in with correct credentials" });
+            return res.status(400).json({ success, error: "Essayez de vous connecter avec les identifiants corrects." });
         }
 
-        const pwdCompare = await bcrypt.compare(password, user.password); // this return true false.
+        const pwdCompare = await bcrypt.compare(password, user.password); // Cela renvoie vrai ou faux
         if (!pwdCompare) {
-            return res.status(400).json({ success, error: "Try Logging in with correct credentials" });
+            return res.status(400).json({ success, error: "Essayez de vous connecter avec les identifiants corrects." });
         }
         const data = {
             user: {
@@ -89,11 +89,11 @@ router.post('/login', [
     }
 })
 
-// Get logged in User details, Login Required.
+// Obtenez les détails de l'utilisateur connecté, Connexion requise.
 router.post('/getuser', fetch, async (req, res) => {
     try {
         const userId = req.user.id;
-        const user = await User.findById(userId).select("-password") // -password will not pick password from db.
+        const user = await User.findById(userId).select("-password") // Le mot de passe ne sera pas récupéré depuis la base de données
         res.send(user)
     } catch (error) {
         console.error(error.message)
@@ -101,7 +101,7 @@ router.post('/getuser', fetch, async (req, res) => {
 
     }
 })
-// Get logged in User details, Login Required.
+// Obtenez les détails de l'utilisateur connecté, Connexion requise.
 router.post('/getlocation', async (req, res) => {
     try {
         let lat = req.body.latlong.lat
@@ -148,7 +148,7 @@ router.post('/orderData', async (req, res) => {
     await data.splice(0,0,{Order_date:req.body.order_date})
     console.log("1231242343242354",req.body.email)
 
-    //if email not exisitng in db then create: else: InsertMany()
+    //Si l'email n'existe pas dans la base de données, créez-le : sinon : InsertMany()
     let eId = await Order.findOne({ 'email': req.body.email })    
     console.log(eId)
     if (eId===null) {
